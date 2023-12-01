@@ -1,0 +1,42 @@
+:root {
+    --color-one: #DDC9B4;
+    --color-two: #0A3200;
+    --color-three: #CBA328;
+    --color-four: #C17C74;
+    --color-five: #ECE1DC;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    font-family: 'Italianno', cursive;
+    background-color: var(--color-one);
+    color: var(--color-three);
+}
+
+header {
+    background-color: var(--color-two);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.restaurant-name {
+    font-size: 4rem;
+}
+
+.nav-button {
+    background-color: var(--color-five);
+    cursor: pointer;
+    padding: .5rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
