@@ -105,7 +105,8 @@ header {
 }
 
 .menu-section-title {
-    font-size: 4rem;
+    font-size: 3rem;
+    opacity: 50%;
 }
 
 #menu-title {
@@ -161,4 +162,18 @@ header {
 
 .footer {
     background-color: var(--color-two);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-three);
+    font-size: 1rem;
+    font-family: sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.footer-img {
+    width: 2rem;
+    height: auto;
+    padding-left: 1rem;
 }
