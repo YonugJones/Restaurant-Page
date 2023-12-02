@@ -12,7 +12,7 @@ function createHome() {
 
     const artiBucco = document.createElement('img');
     artiBucco.classList.add('home-img');
-    artiBucco.src = '../imgs/artie-bucco.jpeg';
+    artiBucco.src = 'imgs/artie-bucco.jpeg';
     artiBucco.alt = 'artisan de cuisie: Artie Bucco';
 
     const paraThree = document.createElement('p');

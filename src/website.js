@@ -85,7 +85,7 @@ function createFooter() {
 
     const gitHubIcon = document.createElement('img');
     gitHubIcon.classList.add('footer-img')
-    gitHubIcon.src = '../imgs/github-mark.png';
+    gitHubIcon.src = 'imgs/github-mark.png';
 
     gitHubLink.appendChild(gitHubIcon);
 

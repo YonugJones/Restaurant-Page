@@ -10,7 +10,7 @@ function createContact() {
 
     const contactImg = document.createElement('img');
     contactImg.classList.add('contact-img')
-    contactImg.src = '../imgs/contactImg.jpeg'; // find image
+    contactImg.src = 'imgs/contactImg.jpeg'; 
     contactImg.alt = 'Chef Artie Bucco entertaining his guests';
 
     const hoursOne = document.createElement('p');
