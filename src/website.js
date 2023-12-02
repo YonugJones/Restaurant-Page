@@ -72,6 +72,9 @@ function createFooter() {
     const footer = document.createElement('footer');
     footer.classList.add('footer');
 
+    const author = document.createElement('p');
+    author.textContent = ''
+
     return footer;
 };
 
@@ -83,7 +86,7 @@ function initializeWebsite() {
     content.appendChild(createFooter());
 
     setActiveButton(document.querySelector(".nav-button"));
-    loadHome(); 
+    loadMenu(); // need to change back to loadHome 
 };
 
 export default initializeWebsite;
