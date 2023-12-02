@@ -31,6 +31,11 @@ function createNav() {
     const menuButton = document.createElement('button');
     menuButton.classList.add('nav-button');
     menuButton.textContent = 'Menu';
+    menuButton.addEventListener('click', (e) => {
+        if (e.target.classList.contains('active')) return;
+        setActiveButton(menuButton);
+        loadMenu();
+    })
 
     const contactButton = document.createElement('button');
     contactButton.classList.add('nav-button');
@@ -73,7 +78,19 @@ function createFooter() {
     footer.classList.add('footer');
 
     const author = document.createElement('p');
-    author.textContent = ''
+    author.textContent = 'created by Yonug Jones 2023'
+
+    const gitHubLink = document.createElement('a');
+    gitHubLink.href = 'https://github.com/YonugJones';
+
+    const gitHubIcon = document.createElement('img');
+    gitHubIcon.classList.add('footer-img')
+    gitHubIcon.src = '../imgs/github-mark.png';
+
+    gitHubLink.appendChild(gitHubIcon);
+
+    footer.appendChild(author);
+    footer.appendChild(gitHubLink);
 
     return footer;
 };
@@ -86,7 +103,7 @@ function initializeWebsite() {
     content.appendChild(createFooter());
 
     setActiveButton(document.querySelector(".nav-button"));
-    loadMenu(); // need to change back to loadHome 
+    loadHome();
 };
 
 export default initializeWebsite;

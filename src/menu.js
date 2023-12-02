@@ -11,7 +11,7 @@ function createMenu() {
     primi.classList.add('menu-section');
     primi.setAttribute('id', 'primi');
 
-    // primi.appendChild(createMenuItem('Primi', ''));
+    primi.appendChild(createSectionTitle('primi', 'Primi'));
     primi.appendChild(createMenuItem('Zucchini Fritti', 'Oregano, Red Pepper Almond Dip'));
     primi.appendChild(createMenuItem('Arancini', 'Smoked Scamorza, Pomodoro'));
     primi.appendChild(createMenuItem('Ricotta Gnudi', 'Pesto Genovese, Parmesan'));
@@ -20,7 +20,7 @@ function createMenu() {
     secondi.classList.add('menu-section');
     secondi.setAttribute('id', 'secondi');
 
-    // secondi.appendChild(createMenuItem('Secondi', ''));
+    secondi.appendChild(createSectionTitle('secondi', 'Secondi'));
     secondi.appendChild(createMenuItem('Veal Chop Milanese', 'alla Parmigiana or Marsala'));
     secondi.appendChild(createMenuItem('Dover Sole Piccata', 'Sicilian Artichokes, Capers, Brown Butter'));
     secondi.appendChild(createMenuItem('Eggplant Parmesan alla Billi', 'Seasoned Breadcrumbs'));
@@ -29,7 +29,7 @@ function createMenu() {
     zuppa.classList.add('menu-section');
     zuppa.setAttribute('id', 'zuppa');
 
-    // zuppa.appendChild(createMenuItem('Zuppa', ''));
+    zuppa.appendChild(createSectionTitle('zuppa', 'Zuppa'));
     zuppa.appendChild(createMenuItem('Broccolini cheddartini', 'broccoli with aged cheddar'));
     zuppa.appendChild(createMenuItem('Tomato tortellini', 'tomoato puree with pork tortellini'));
 
@@ -37,7 +37,7 @@ function createMenu() {
     insalate.classList.add('menu-section');  
     insalate.setAttribute('id', 'insalate');
 
-    // insalate.appendChild(createMenuItem('Insalate', ''));
+    insalate.appendChild(createSectionTitle('insalate', 'Insalate'));
     insalate.appendChild(createMenuItem("Giuliana's Italian", 'Fresh Mozzarella, Salumi, Pepperocini'));
     insalate.appendChild(createMenuItem('Burrata Panzanella', 'Heirloom Tomatoes, Focaccia Croutons'));
     
@@ -45,7 +45,7 @@ function createMenu() {
     dolce.classList.add('menu-section');  
     dolce.setAttribute('id', 'dolce');
 
-    // dolce.appendChild(createMenuItem('Dolce', ''));
+    dolce.appendChild(createSectionTitle('dolce', 'Dolce'));
     dolce.appendChild(createMenuItem('Pistachio Gelato al Minuto', 'Wild Italian Strawberries, Sicilian Pistachios'));
     dolce.appendChild(createMenuItem('Tartufo Sundae', 'Hazelnut, Milk Chocolate'));
 
@@ -58,6 +58,19 @@ function createMenu() {
 
     return menu;
 };
+
+function createSectionTitle(sectionId, title) {
+    const section = document.createElement('div');
+    section.setAttribute('id', sectionId);
+
+    const sectionTitle = document.createElement('h2');
+    sectionTitle.classList.add('menu-section-title');
+    sectionTitle.textContent = title;
+
+    section.appendChild(sectionTitle);
+    
+    return section;
+}
 
 function createMenuItem(name, description) {
     const menuItem = document.createElement('div');
@@ -73,7 +86,7 @@ function createMenuItem(name, description) {
     menuItem.appendChild(foodDescription);
 
     return menuItem;
-}
+};
 
 function loadMenu() {
     const main = document.getElementById('main');
